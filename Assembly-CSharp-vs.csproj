@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\CoconutThrower.cs" />
      <Compile Include="Assets\Script\DoorManager.cs" />
      <Compile Include="Assets\Script\Inventory.cs" />
      <Compile Include="Assets\Script\PlayerCollisions.cs" />

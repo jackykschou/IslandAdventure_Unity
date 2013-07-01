@@ -67,3 +67,20 @@ public class PlayerCollisions : MonoBehaviour {
 	}
 }
 **/
+
+/*another approach to pick up battery other than using Trigger
+public class PlayerCollisions : MonoBehaviour {
+
+	void OnControllerColliderHit(ControllerColliderHit col)
+	{
+		if(col.gameObject.tag == "cell")
+		{
+			SendMessage("CellPickUp");
+			Destroy(col.gameObject);
+		}
+	}
+	
+}
+*/
+
+public class PlayerCollisions : MonoBehaviour {}

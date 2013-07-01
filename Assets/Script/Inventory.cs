@@ -14,6 +14,20 @@ public class Inventory : MonoBehaviour {
 		charge = 0;
 	}
 	
+	void Update()
+	{
+		RaycastHit hit;;
+		Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0f));
+		if(Physics.Raycast(ray, out hit, 1.5f))
+		{
+			if(Input.GetKeyDown(KeyCode.E) && hit.transform.tag == "cell")
+			{
+				CellPickUp();
+				hit.transform.SendMessage("Picked");
+			}
+		}
+	}
+	
 	void CellPickUp()
 	{
 		HUDon();

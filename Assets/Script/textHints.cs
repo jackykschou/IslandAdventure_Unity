@@ -5,15 +5,6 @@ public class textHints : MonoBehaviour {
 	
 	float timer = 0.0f;
 	
-	void ShowHint(string message)
-	{
-		guiText.text = message;
-		if(!guiText.enabled)
-		{
-			guiText.enabled = true;
-		}
-	}
-	
 	void Update()
 	{
 		if(guiText.enabled)
@@ -24,6 +15,15 @@ public class textHints : MonoBehaviour {
 		{
 			guiText.enabled = false;
 			timer = 0.0f;
+		}
+	}
+	
+	void ShowHint(string message)
+	{
+		guiText.text = message;
+		if(!guiText.enabled)
+		{
+			guiText.enabled = true;
 		}
 	}
 }

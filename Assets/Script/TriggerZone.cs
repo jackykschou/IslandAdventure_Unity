@@ -28,7 +28,7 @@ public class TriggerZone : MonoBehaviour {
 			else
 			{
 				transform.FindChild("door").audio.PlayOneShot(lockedSound);
-				textHint.SendMessage("ShowHint", "Power is needed to open the power...");
+				textHint.SendMessage("ShowHint", "Power is needed to open the door...");
 				coll.gameObject.SendMessage("HUDon");
 			}
 				
