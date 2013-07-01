@@ -7,7 +7,6 @@ public class PowerCell : MonoBehaviour {
 	
 	void Update () 
 	{
-		
 		transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
 	}
 	
@@ -15,8 +14,9 @@ public class PowerCell : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "Player")
 		{
-			coll.gameObject.SendMessage("PickupCell");
+			coll.gameObject.SendMessage("CellPickUp");
 			Destroy(gameObject);
 		}
 	}
+	
 }
