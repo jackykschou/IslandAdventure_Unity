@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour {
 	public Texture2D[] hudCharge;
 	public GUITexture chargeHudGUI;
 	public Texture2D[] meterCharge;
+	public GUITexture matchGUI;
 	public Renderer meter;
 	
 	void Start () {
@@ -20,10 +21,22 @@ public class Inventory : MonoBehaviour {
 		Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0f));
 		if(Physics.Raycast(ray, out hit, 1.5f))
 		{
-			if(Input.GetKeyDown(KeyCode.E) && hit.transform.tag == "cell")
+			if(Input.GetKeyDown(KeyCode.E))
 			{
-				CellPickUp();
-				hit.transform.SendMessage("Picked");
+				if(hit.transform.tag == "cell")
+				{
+					CellPickUp();
+					hit.transform.SendMessage("Picked");
+				}
+				else if(hit.transform.tag == "matches")
+				{
+					MatchesPickUp();	
+					hit.transform.SendMessage("Picked");
+				}
+				else if(hit.transform.tag == "firecamp")
+				{	
+					hit.transform.SendMessage("StartFire");
+				}
 			}
 		}
 	}
@@ -35,6 +48,12 @@ public class Inventory : MonoBehaviour {
 		charge++;
 		chargeHudGUI.texture = hudCharge[charge];
 		meter.material.mainTexture = meterCharge[charge];
+	}
+	
+	void MatchesPickUp()
+	{
+		AudioSource.PlayClipAtPoint(collectSound, transform.position);
+		matchGUI.enabled = true;
 	}
 	
 	void HUDon()

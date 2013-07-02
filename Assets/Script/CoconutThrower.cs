@@ -4,7 +4,7 @@ using System.Collections;
 
 public class CoconutThrower : MonoBehaviour {
 	
-	static bool throwable = false;
+	public static bool throwable = false;
 	
 	public AudioClip throwSound;
 	public Rigidbody coconutprefab;
