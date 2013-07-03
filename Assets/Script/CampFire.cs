@@ -6,24 +6,19 @@ public class CampFire : MonoBehaviour {
 	public GUITexture matchGUI;
 	ParticleSystem[] fireEmitter;
 	public GUIText textHint;
-	bool lightened = false;
 	
 	public void StartFire()
 	{
-		if(matchGUI.enabled)
+		fireEmitter = GetComponentsInChildren<ParticleSystem>();
+		foreach(ParticleSystem system in fireEmitter)
 		{
-			fireEmitter = GetComponentsInChildren<ParticleSystem>();
-			foreach(ParticleSystem system in fireEmitter)
-			{
-				system.Play();
-			}
-			audio.Play();
-			matchGUI.enabled = false;
-			lightened = true;
+			system.Play();
 		}
-		else if(!lightened)
-		{
-			textHint.SendMessage("ShowHint", "I need to lighen the fire...");
-		}
+		audio.Play();
+	}
+	
+	public void ShowHint()
+	{
+		textHint.SendMessage("ShowHint", "I need to lighen the fire...");
 	}
 }

@@ -10,9 +10,13 @@ public class Inventory : MonoBehaviour {
 	public Texture2D[] meterCharge;
 	public GUITexture matchGUI;
 	public Renderer meter;
+	public GameObject winObj;
+	bool win;
 	
 	void Start () {
+		matchGUI.enabled = false;
 		charge = 0;
+		win = false;
 	}
 	
 	void Update()
@@ -33,9 +37,19 @@ public class Inventory : MonoBehaviour {
 					MatchesPickUp();	
 					hit.transform.SendMessage("Picked");
 				}
-				else if(hit.transform.tag == "firecamp")
+				else if(hit.transform.tag == "firecamp" && !win)
 				{	
-					hit.transform.SendMessage("StartFire");
+					if(matchGUI.enabled)
+					{
+						win = true;
+						matchGUI.enabled = false;
+						hit.transform.SendMessage("StartFire");
+						winObj.SendMessage("GameOver");
+					}
+					else
+					{
+						hit.transform.SendMessage("ShowHint");
+					}
 				}
 			}
 		}

@@ -1,22 +1,26 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\MainMenuGUI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Inventory.cs">
     <Files>
-      <File FileName="Assets\Script\TargetCollision.cs" Line="30" Column="15" />
+      <File FileName="Assets\Script\Inventory.cs" Line="45" Column="32" />
+      <File FileName="Assets\Script\CoconutThrower.cs" Line="5" Column="31" />
+      <File FileName="Assets\Script\TargetCollision.cs" Line="20" Column="3" />
       <File FileName="Assets\Script\WinStateClass.cs" Line="16" Column="3" />
-      <File FileName="Assets\Script\CoconutWin.cs" Line="15" Column="4" />
+      <File FileName="Assets\Script\CoconutWin.cs" Line="14" Column="7" />
       <File FileName="Assets\Script\winStateChecker.cs" Line="6" Column="60" />
-      <File FileName="Assets\Script\CoconutThrower.cs" Line="28" Column="1" />
       <File FileName="Assets\Script\ThrowTrigger.cs" Line="17" Column="5" />
-      <File FileName="Assets\Script\textHints.cs" Line="7" Column="2" />
-      <File FileName="Assets\Script\TidyObject.cs" Line="17" Column="4" />
-      <File FileName="Assets\Script\Inventory.cs" Line="11" Column="2" />
-      <File FileName="Assets\Script\PowerCell.cs" Line="20" Column="2" />
+      <File FileName="Assets\Script\textHints.cs" Line="5" Column="2" />
+      <File FileName="Assets\Script\TidyObject.cs" Line="3" Column="1" />
       <File FileName="Assets\Script\TriggerZone.cs" Line="26" Column="13" />
       <File FileName="Assets\Script\Matches.cs" Line="5" Column="2" />
-      <File FileName="Assets\Script\CampFire.cs" Line="30" Column="1" />
+      <File FileName="Assets\Script\CampFire.cs" Line="19" Column="2" />
       <File FileName="Assets\Script\MainMenuBtns.cs" Line="3" Column="1" />
-      <File FileName="Assets\Script\MainMenuGUI.cs" Line="63" Column="3" />
+      <File FileName="Assets\Script\MainMenuGUI.cs" Line="66" Column="25" />
+      <File FileName="Assets\Script\MessageAnimator.cs" Line="18" Column="39" />
+      <File FileName="Assets\Script\WinGame.cs" Line="16" Column="41" />
+      <File FileName="Assets\Script\Fader.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Loading.cs" Line="11" Column="3" />
+      <File FileName="Assets\Script\ReloadMenu.cs" Line="6" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

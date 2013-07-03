@@ -9,6 +9,11 @@ public class CoconutWin : MonoBehaviour {
 	public GameObject cellPrefab;
 	public static int downTargets = 0;
 	
+	void Start()
+	{
+		won = false;
+	}
+	
 	void GetGift()
 	{
 		if(!won)
