@@ -27,7 +27,6 @@ public class TargetCollision : MonoBehaviour {
 	IEnumerator targetHit()
 	{
 		winStateChecker.checker.states[ID] = true;
-		Debug.Log(ID);
 		if(winStateChecker.checker.checkState())
 		{
 			transform.root.gameObject.SendMessage("GetGift");

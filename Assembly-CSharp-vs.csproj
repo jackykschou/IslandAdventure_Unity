@@ -50,6 +50,7 @@
      <Compile Include="Assets\Script\DoorManager.cs" />
      <Compile Include="Assets\Script\Inventory.cs" />
      <Compile Include="Assets\Script\MainMenuBtns.cs" />
+     <Compile Include="Assets\Script\MainMenuGUI.cs" />
      <Compile Include="Assets\Script\Matches.cs" />
      <Compile Include="Assets\Script\PlayerCollisions.cs" />
      <Compile Include="Assets\Script\PowerCell.cs" />

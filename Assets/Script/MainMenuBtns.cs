@@ -23,13 +23,13 @@ public class MainMenuBtns : MonoBehaviour {
 	IEnumerator OnMouseUp()
 	{
 		audio.PlayOneShot(beep);
+		yield return new WaitForSeconds(0.5f);
 		if(quitButton)
 		{
 			Application.Quit();
 		}
 		else
 		{
-			yield return new WaitForSeconds(0.5f);
 			Application.LoadLevel(levelToLoad);
 		}
 	}
