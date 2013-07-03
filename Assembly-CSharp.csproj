@@ -49,6 +49,7 @@
      <Compile Include="Assets\Script\CoconutWin.cs" />
      <Compile Include="Assets\Script\DoorManager.cs" />
      <Compile Include="Assets\Script\Inventory.cs" />
+     <Compile Include="Assets\Script\MainMenuBtns.cs" />
      <Compile Include="Assets\Script\Matches.cs" />
      <Compile Include="Assets\Script\PlayerCollisions.cs" />
      <Compile Include="Assets\Script\PowerCell.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Script\TriggerZone.cs" />
      <Compile Include="Assets\Script\WinStateClass.cs" />
      <Compile Include="Assets\Script\textHints.cs" />
+     <Compile Include="Assets\Script\winStateChecker.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
   </ItemGroup>

@@ -8,16 +8,10 @@ public class CoconutWin : MonoBehaviour {
 	public AudioClip victorySound;
 	public GameObject cellPrefab;
 	public static int downTargets = 0;
-	//WinStateClass states = new WinStateClass(); //for another approach
 	
-	void Update()
+	void GetGift()
 	{
-		/**for another approach
-		GameObject.Find("t1").SendMessage("GetDownState", states);
-		GameObject.Find("t2").SendMessage("GetDownState", states);
-		GameObject.Find("t3").SendMessage("GetDownState", states);
-		*/
-		if(downTargets >= 4 && !won)
+		if(!won)
 		{
 			audio.PlayOneShot(victorySound);
 			won = true;
@@ -26,8 +20,6 @@ public class CoconutWin : MonoBehaviour {
 			Instantiate(cellPrefab, gift.transform.position, transform.rotation);
 			Destroy(gift);
 		}
-			
-			
 	}
 	
 }

@@ -5,17 +5,15 @@ public class WinStateClass
 {
 	public WinStateClass()
 	{
-		T1Down = false;
-		T2Down = false;
-		T3Down = false;
+		states[0] = false;
+		states[1] = false;
+		states[2] = false;
 	}
 	
 	public bool checkState()
 	{
-		return T1Down && T2Down && T3Down;
+		return  states[0] && states[1] && states[2];
 	}
 	
-	public bool T1Down;
-	public bool T2Down;
-	public bool T3Down;
+	public bool[] states = new bool[3];
 }
