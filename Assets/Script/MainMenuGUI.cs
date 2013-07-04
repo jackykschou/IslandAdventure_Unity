@@ -28,15 +28,22 @@ public class MainMenuGUI : MonoBehaviour {
 		
 		if(isMainPage)
 		{
-			if(GUI.Button(playButton, "Play"))
+			if(Application.CanStreamedLevelBeLoaded("Island"))
 			{
-				StartCoroutine("ButtonAction", "Play");
+				if(GUI.Button(playButton, "Play"))
+				{
+					StartCoroutine("ButtonAction", "Play");
+				}
 			}
+			else{
+					float loadPercent = Application.GetStreamProgressForLevel(1) * 100;
+					GUI.Box(new Rect(playButton), "Loading..." + loadPercent.ToString("f0") + "%");	
+				}
 			if(GUI.Button(instructButton, "Instructions"))
 			{
 				StartCoroutine("ButtonAction", "Instructions");
 			}
-			if(GUI.Button(quitButton, "Quit"))
+			if(Application.platform != RuntimePlatform.OSXWebPlayer && Application.platform != RuntimePlatform.WindowsWebPlayer && GUI.Button(quitButton, "Quit"))
 			{
 				StartCoroutine("ButtonAction", "Quit");
 			}

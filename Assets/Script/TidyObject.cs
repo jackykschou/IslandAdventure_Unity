@@ -9,12 +9,4 @@ public class TidyObject : MonoBehaviour {
 	{
 		Destroy(gameObject, livingTime);
 	}
-	
-	void OnCollisionEnter(Collision coll)
-	{
-		if(coll.transform.tag == "target")
-		{
-			Destroy(gameObject);	
-		}
-	}
 }
